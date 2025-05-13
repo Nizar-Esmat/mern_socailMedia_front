@@ -4,15 +4,17 @@
     overflow-y: scroll;
     position: sticky;
     top: 50px;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
 }
 ::-webkit-scrollbar{
     width: 5px;
 }
 ::-webkit-scrollbar-track{
-    background-color: #f1f1f1;
+    background-color: var(--secondary-bg);
 }
 ::-webkit-scrollbar-thumb{
-    background-color: rgb(179, 179, 179);
+    background-color: var(--secondary-accent);
 }
 .sideBarWrapper{
     padding: 25px;
@@ -21,6 +23,12 @@
     padding: 0;
     margin: 0;
     list-style: none;
+}
+.sidebarItem:hover{
+    padding: 5px 2.5px;
+    background-color: var(--sidebar-hover);
+    color: var(--primary-text);
+    border-radius: 15px;
 }
 .sidebarItem{
     display: flex;
@@ -41,9 +49,14 @@
     padding: 10px;
     border-radius: 5px;
     font-weight: 500;
+    cursor: pointer;
+    background-color: var(--primary-accent);
+    color: var(--primary-text);
+    transition: background 0.2s, color 0.2s;
 }
 .sidebarHr{
     margin: 20px 0;
+    border-color: var(--secondary-bg);
 }
 .siebarFrinedList{
     padding: 0;
@@ -51,8 +64,8 @@
     list-style: none;
 }
 .sidebarButton:hover{
-    background-color: lightcoral;
-    color: white;
+    background-color: var(--sidebar-hover);
+    color: var(--primary-text);
 }
 .sidebarFrined{
     display: flex;
@@ -68,7 +81,6 @@
     margin-right: 10px;
 }
 
-/* Add responsive behavior */
 @media (max-width: 768px) {
   .sideBar {
     flex: 1;

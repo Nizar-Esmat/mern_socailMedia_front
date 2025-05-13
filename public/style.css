@@ -1,3 +1,14 @@
+:root{
+    --primary-bg: #102a43;           /* Deep navy blue */
+    --primary-accent: #2b6777;       /* Muted teal */
+    --primary-blue: #52ab98;         /* Soft cyan */
+    --primary-text: #f5f7fa;         /* Very light gray */
+    --secondary-bg: #c8d8e4;         /* Pale blue */
+    --secondary-accent: #b2f7ef;     /* Light aqua */
+    --sidebar-hover: #2b6777;        /* Muted teal */
+    --sidebar-active: #102a43;       /* Deep navy blue */
+    --danger: #ff6b6b;               /* Soft red */
+}
 *{
     margin: 0;
     padding: 0;
