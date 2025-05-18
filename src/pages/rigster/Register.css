@@ -1,0 +1,96 @@
+.register {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-bg);
+}
+
+.registerWrapper {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    background-color: var(--secondary-accent);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.registerLeft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--primary-blue);
+    padding-left: 20px;
+}
+
+.registerRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--primary-blue);
+}
+
+.registerLogo {
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--primary-text);
+    margin-bottom: 10px;
+}
+
+.registerDesc {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--primary-text);
+}
+
+.registerBox {
+    height: 400px;
+    padding: 20px;
+    background-color: var(--primary-text);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.registerInput {
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-accent);
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.registerButton {
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primary-blue);
+    color: var(--primary-text);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.registerTerms {
+    text-align: center;
+    font-size: 14px;
+    color: var(--primary-accent);
+}
+
+.registerLoginButton {
+    width: 60%;
+    align-self: center;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--sidebar-hover);
+    color: var(--primary-text);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+

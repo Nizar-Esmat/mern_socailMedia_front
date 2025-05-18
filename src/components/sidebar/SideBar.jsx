@@ -10,6 +10,8 @@ import WorkIcon from '@mui/icons-material/Work';
 import EventIcon from '@mui/icons-material/Event';
 import SchoolIcon from '@mui/icons-material/School';
 
+import { Users } from '../../dummyData'
+import CloseFriends from '../closeFriends/CloseFriends';
 export default function SideBar() {
     return (
         <div className='sideBar'>
@@ -55,33 +57,13 @@ export default function SideBar() {
                 <button className='sidebarButton'>show More</button>
                 <hr className='sidebarHr' />
                 <ul className="siebarFrinedList">
-                    <li className="sidebarFrined">
-                        <img className='sidebarFrinedImg' src="assets/person/1.jpeg" alt="" />
-                        <span className="sidebarFrinedName">John Doe</span>
-                    </li>
-                    <li className="sidebarFrined">
-                        <img className='sidebarFrinedImg' src="assets/person/1.jpeg" alt="" />
-                        <span className="sidebarFrinedName">John Doe</span>
-                    </li>
-                    <li className="sidebarFrined">
-                        <img className='sidebarFrinedImg' src="assets/person/1.jpeg" alt="" />
-                        <span className="sidebarFrinedName">John Doe</span>
-                    </li>                    <li className="sidebarFrined">
-                        <img className='sidebarFrinedImg' src="assets/person/1.jpeg" alt="" />
-                        <span className="sidebarFrinedName">John Doe</span>
-                    </li>                    <li className="sidebarFrined">
-                        <img className='sidebarFrinedImg' src="assets/person/1.jpeg" alt="" />
-                        <span className="sidebarFrinedName">John Doe</span>
-                    </li>                    <li className="sidebarFrined">
-                        <img className='sidebarFrinedImg' src="assets/person/1.jpeg" alt="" />
-                        <span className="sidebarFrinedName">John Doe</span>
-                    </li>                    <li className="sidebarFrined">
-                        <img className='sidebarFrinedImg' src="assets/person/1.jpeg" alt="" />
-                        <span className="sidebarFrinedName">John Doe</span>
-                    </li>                    <li className="sidebarFrined">
-                        <img className='sidebarFrinedImg' src="assets/person/1.jpeg" alt="" />
-                        <span className="sidebarFrinedName">John Doe</span>
-                    </li>
+                    {
+                    Users.map((value, index) => {
+                        return (
+                            <CloseFriends freind={value} key={index} />
+                        )
+                    })
+                    }
                 </ul>
             </div>
         </div>
