@@ -6,18 +6,20 @@ import { Users } from '../../dummyData'
 export default function Post({post}) {
     const user = Users.filter((u)=> u.id === post.userId)[0]
     const [like ,setlike] = useState(post.like)
-    const [isLiked ,setisLiked] = useState(false)
-
+    const [isLiked ,setisLiked] = useState(false);
+    const pf = import.meta.env.VITE_PUBLIC_FOLDER
     const likeHandler = () => {
         setlike(isLiked ? like - 1 : like + 1)
         setisLiked(!isLiked) 
     }
+
+    
     return (
         <div className='post'>
             <div className="postWrapper">
                 <div className="postTop">
                     <div className="postTopLeft">
-                        <img className='postProfileImg' src={user ? user.profilePicture : ""} alt="" />
+                        <img className='postProfileImg' src={user ? pf+user.profilePicture : ""} alt="" />
                         <span className="postUsername">{user ? user.username : ""}</span>
                         <span className="postUserDate">{post.date}</span>
 
@@ -30,7 +32,8 @@ export default function Post({post}) {
                     <span className="postText">
                         {post?.desc}
                     </span>
-                    <img className='postImg' src={post.photo} alt="" />
+                    <img className='postImg' src={pf+post.photo} alt="" />
+                    
                 </div>
                 <div className="postBottom">
                     <div className="postBottomLeft">
